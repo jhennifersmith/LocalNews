@@ -52,7 +52,7 @@ const EditNew = ({ navigation, route }: any) => {
   };
 
   return (
-    <View>
+    <View style={styles.container}>
       <View>
         <Text style={styles.label}>Title</Text>
         <TextInput
@@ -79,43 +79,32 @@ export default EditNew;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 2,
+    flex: 1,
     alignItems: "center",
     backgroundColor: "#FFF",
   },
-  box: {
-    backgroundColor: "#DAF",
-    margin: 5,
-    padding: 5,
-    width: 300,
-    borderRadius: 5,
-  },
-  inputTitle: {
+  inputTitle:{
     margin: 5,
     height: 40,
     width: 300,
     padding: 20,
     fontSize: 16,
-    color: "#000",
-    backgroundColor: "#DAF",
+    color: '#000',
+    backgroundColor: '#ffe5ec',
     marginVertical: 10,
-    borderRadius: 5,
-  },
-  inputDescription: {
+    borderRadius: 5
+},
+inputDescription:{
     margin: 5,
     height: 200,
     width: 300,
     padding: 20,
     fontSize: 16,
-    color: "#000",
-    backgroundColor: "#DAF",
+    color: '#000',
+    backgroundColor: '#ffe5ec',
     marginVertical: 10,
-    borderRadius: 5,
-  },
-  new: {
-    textAlign: "center",
-    justifyContent: "center",
-  },
+    borderRadius: 5
+},
   label: {
     fontWeight: "bold",
     fontSize: 18,
