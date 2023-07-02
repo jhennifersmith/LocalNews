@@ -18,8 +18,8 @@ const Login = ({ navigation }) => {
       "158918239383-de4c44adk7t7rdpqkdj1evfu88ed3qoo.apps.googleusercontent.com",
     webClientId:
       "158918239383-fg34ihvdt93h5cdcpgdcglf1j97img1n.apps.googleusercontent.com",
-    expoClientId: 
-      "158918239383-pvejooks1fhl7ulj7v1p4ihqn54volcf.apps.googleusercontent.com"
+    expoClientId:
+      "158918239383-pvejooks1fhl7ulj7v1p4ihqn54volcf.apps.googleusercontent.com",
   });
 
   React.useEffect(() => {
@@ -65,22 +65,32 @@ const Login = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.box}>
-      <Text style={styles.logo}>Alegre News</Text>
-      <Text style={styles.credit}>Code by Jhenni</Text>
-      {!isLoggedIn && (
-        <TouchableOpacity style={styles.btnSignIn} onPress={() => promptAsync()}>Sign in with Google</TouchableOpacity>
-      )}
-      {isLoggedIn && <Text>You're logged xD </Text>}
-      {isLoggedIn && (
-        <TouchableOpacity style={styles.btnEnter}
-          
-          onPress={() => navigation.navigate("Roles")}
-        >Enter</TouchableOpacity>
-      )}
-      {isLoggedIn && <TouchableOpacity style={styles.btnLogout} onPress={logout}>Logout</TouchableOpacity>}
-      <StatusBar style="auto" />
+        <Text style={styles.logo}>Alegre News</Text>
+        <Text style={styles.credit}>Code by Jhenni</Text>
+        {!isLoggedIn && (
+          <TouchableOpacity
+            style={styles.btnSignIn}
+            onPress={() => promptAsync()}
+          >
+            Sign in with Google
+          </TouchableOpacity>
+        )}
+        {isLoggedIn && <Text>You're logged xD </Text>}
+        {isLoggedIn && (
+          <TouchableOpacity
+            style={styles.btnEnter}
+            onPress={() => navigation.navigate("Roles")}
+          >
+            Enter
+          </TouchableOpacity>
+        )}
+        {isLoggedIn && (
+          <TouchableOpacity style={styles.btnLogout} onPress={logout}>
+            Logout
+          </TouchableOpacity>
+        )}
+        <StatusBar style="auto" />
       </View>
-      
     </View>
   );
 };
@@ -105,7 +115,7 @@ const styles = StyleSheet.create({
   credit: {
     fontSize: 18,
     marginBottom: 10,
-    color: "#ff8fab"
+    color: "#ff8fab",
   },
   btnSignIn: {
     margin: 5,
@@ -117,7 +127,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     color: "#000",
     borderRadius: 5,
-    fontSize:18, 
+    fontSize: 18,
   },
   btnEnter: {
     margin: 5,
@@ -140,5 +150,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     color: "#000",
     borderRadius: 5,
-  }
+  },
 });
